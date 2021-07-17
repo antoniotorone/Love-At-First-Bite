@@ -13,7 +13,8 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-user-tie prefix"></i>
-          <input id="username" name="username" type="text" class="validate">
+          <input id="username" name="username" type="text"  minlength="3"
+          maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
           <label for="username">Username</label>
         </div>
       </div>
@@ -21,7 +22,8 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-door-closed prefix"></i>
-          <input id="password" name="password" type="password" class="validate">
+          <input id="password" name="password" type="password" minlength="3"
+          maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
           <label for="password">Password</label>
         </div>
       </div>

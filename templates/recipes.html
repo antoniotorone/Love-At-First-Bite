@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-     {% for recipe in recipes %}
-        {{ recipe.category_name }}<br>
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.serving }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.cooktime }}<br>
-        {{ recipe.steps }}<br>
-        {{ recipe.tools }}<br>
-    {% endfor %}
+   {% for recipe in recipes %}
+      {{ recipe.category_name }}<br>
+      {{ recipe.recipe_name }}<br>
+      {{ recipe.serving }}<br>
+      {{ recipe.ingredients }}<br>
+      {{ recipe.cooktime }}<br>
+      {{ recipe.steps }}<br>
+      {{ recipe.tools }}<br>
+   {% endfor %}
 
 {% endblock %}
