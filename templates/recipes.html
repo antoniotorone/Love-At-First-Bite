@@ -1,14 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-   {% for recipe in recipes %}
-      {{ recipe.category_name }}<br>
-      {{ recipe.recipe_name }}<br>
-      {{ recipe.serving }}<br>
-      {{ recipe.ingredients }}<br>
-      {{ recipe.cooktime }}<br>
-      {{ recipe.steps }}<br>
-      {{ recipe.tools }}<br>
-   {% endfor %}
+   
+      
+   <!--Card image-->
+   <div class="row">
+      <div class="col s12 m7">
+         <div class="card">
+            <div class="card-image">
+               <img src="https://christinascucina.com/wp-content/uploads/2013/03/Arancini-Sicilian-Rice-Balls-Christinas-Cucina-1024x682.jpg">
+            </div>
+            
+            <ul class="collapsible popout">
+            {% for recipe in recipes %}
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons"></i>
+                     <h5>{{ recipe.recipe_name }}</h5>
+                     
+                  </div>
+                  <div class="collapsible-body">
+                     <h6> {{ recipe.category_name }}</h6>
+                     <p>Serving: {{ recipe.serving }}</p>
+                     <p>Ingredients: {{ recipe.ingredients }}</p>
+                     <p>Cooktime: {{ recipe.cooktime }}</p>
+                     <p>Steps: {{ recipe.steps }}</p>
+                     <p>Tools: {{ recipe.tools }}</p>
+                     
+                  </div>
+               </li>
+            {% endfor %}
+            </ul>
+         </div>
+      </div>
+   </div>
 
 {% endblock %}
