@@ -4,19 +4,21 @@
 <h3>Create a recipe</h3>
 
 <div class="row">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{ url_for('create_recipe') }}">
+        <!--foo Category name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_name">Recipe Category</label>
             </div>
         </div>
+        <!--Recipe name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pen-nib prefix"></i>
@@ -25,6 +27,7 @@
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
+        <!--Serving number-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-chair prefix"></i>
@@ -32,6 +35,7 @@
                 <label for="serving">Serving</label>
             </div>
         </div>
+        <!--Recipe ingredients-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-mortar-pestle prefix"></i>
@@ -39,6 +43,7 @@
                 <label for="ingredients">Ingredients</label>
             </div>
         </div>
+        <!--Cooktime-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-stopwatch prefix"></i>
@@ -46,6 +51,7 @@
                 <label for="cooktime">Cooktime</label>
             </div>
         </div>
+        <!--Make the recipe by steps-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-shoe-prints prefix"></i>
@@ -53,12 +59,19 @@
                 <label for="steps">Steps</label>
             </div>
         </div>
+        <!--Tools needed-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensil-spoon prefix"></i>
                 <input id="tools" name="tools" type="text" class="validate" required>
                 <label for="tools">Tools</label>
             </div>
+        </div>
+        <!--Button submit form-->
+        <div class="row">
+            <button class="btn-large  waves-light col s12 center-align" type="submit">Submit
+                <i class="material-icons right"></i>
+            </button>
         </div>
     </form>
 </div>
