@@ -102,6 +102,7 @@ def create_recipe():
     if request.method == "POST":
         recipes = {
             "category_name": request.form.get("category_name"),
+            "img_recipe": request.form.get("img_recipe"),
             "recipe_name": request.form.get("recipe_name"),
             "serving": request.form.get("serving"),
             "ingredients": request.form.getlist("ingredients"),
