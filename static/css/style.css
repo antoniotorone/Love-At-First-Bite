@@ -16,3 +16,42 @@
 .collapsible-header i{
     margin-top: 10px;
 }
+
+.nav-style{
+    background: linear-gradient(to bottom, #d5d5d561, rgb(246 176 200));
+}
+
+/*recipes.html*/
+
+.search-bar{
+    background: linear-gradient(to bottom, rgb(158 158 158 / 22%), rgb(255 255 255));
+
+}
+
+
+
+.carousel{
+    background: linear-gradient(to bottom, #d5d5d561, rgb(246 176 200 / 53%));
+}
+
+
+/*recipe-name*/
+
+.font-name{
+    margin-left: 15px;
+}
+
+
+
+
+
+
+@media only screen and(max-width:600px){
+    
+    /* recipes.html*/
+
+    h3{
+        font-size: large;
+    }
+
+}

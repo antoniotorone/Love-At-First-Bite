@@ -5,24 +5,21 @@
 <div class="row">
   <div class="col s12 m8 offset-m2">
     <div class="card-panel">
-        <h3 class="center-align"> Welcome {{ username }}</h3>
+        <h3 class="center-align"> Hello {{ username }}</h3>
      </div>
   </div>
 </div>
 
 <div class="row">
   {% for category in categories %}
-      <div class="col s12 m3">
+      <div class="col s12 m6">
           <div class="card light-blue darken-4 text-shadow center-align">
               <div class="card-content white-text">
                   <span class="card-title">{{ category.category_name }}</span>
               </div>
               <div class="card-action">
                 <a class=" collapsible popout waves-effect waves-light btn">View</a>
-                <li>hello</li>
-                <li>heloooo</li>
                 
-                  
               </div>
           </div>
       </div>
