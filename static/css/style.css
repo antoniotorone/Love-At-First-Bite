@@ -21,6 +21,10 @@
     background: linear-gradient(to bottom, #d5d5d561, rgb(246 176 200));
 }
 
+.mobile-nav{
+    background: linear-gradient(to bottom, #d5d5d5fa, rgb(246 176 200));
+}
+
 /*recipes.html*/
 
 .search-bar{
@@ -42,16 +46,14 @@
 }
 
 
+/*login.html*/
 
-
-
-
-@media only screen and(max-width:600px){
-    
-    /* recipes.html*/
-
-    h3{
-        font-size: large;
-    }
-
+.register-link{
+   color: #26a69a
 }
+
+
+
+
+
+
