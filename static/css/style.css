@@ -1,10 +1,16 @@
 .logo-size{
+    margin-left: 25px;
     font-size: xx-large;
 }
 
 .flashes h5{
+    background-color: rosybrown;
     line-height: 3;
     
+}
+
+.green.lighten-2 {
+    background-color: rosybrown;
 }
 
 .btn-small{
@@ -49,8 +55,37 @@
 /*login.html*/
 
 .register-link{
-   color: #26a69a
+   color: #fc929d
 }
+
+.register-link:hover{
+    color: red;
+}
+
+/*register.html*/
+
+.card-panel{
+    background: linear-gradient(to bottom, #d5d5d561, rgb(246 176 200 / 53%));
+}
+
+.login-link{
+    color: #fc929d
+}
+
+.login-link:hover{
+    color: red;
+}
+
+/*recipes.html*/
+
+.img-responsive{
+    max-height: 200px;
+}
+
+.margin-container{
+    margin-top: 15px;
+}
+
 
 
 

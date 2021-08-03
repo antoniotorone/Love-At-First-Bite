@@ -29,50 +29,66 @@
    <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-BepcnEnnoPs-unsplash_piks5d.jpg"></a>
  </div>
      
+<div class="row center-align ">
+   <h4>EVERYONE CAN COOK</h4>
+</div>
 
-
-<div>
+<div class="margin-container">
 
    {% if recipes|length> 0 %}
    <ul class="collapsible">
       {% for recipe in recipes %}
+      <div class="col s4">
+         <img class="img-responsive" src="{{recipe.img_recipe}}">
+      </div>
       <li>
          <div class="collapsible-header">
-            <div class="col s8 m4 ">
+            <div class="col s4 m4 ">
                <i class="fas fa-caret-down"></i>
                {% if session.user|lower == recipe.created_by|lower %}
-               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-small btn #ef9a9a red lighten-3">Delete</a>
+               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
+                  class="btn-small btn #ef9a9a red lighten-3">Delete</a>
                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}"
                   class="btn-small #ffcc80 orange lighten-3">Edit</a>
                {% endif %}
-
             </div>
-
 
             <div class="col s4 m8">
                <h5 class="font-name">{{ recipe.recipe_name }}</h5>
+
             </div>
 
-         </div>
+              
+
+           </div>
 
 
-         <div class="collapsible-body">
-            <h6> {{ recipe.category_name }}</h6>
-            <p>Serving: {{ recipe.serving }}</p>
-            <p>Ingredients: {{ recipe.ingredients }}</p>
-            <p>Cooktime: {{ recipe.cooktime }}</p>
-            <p>Steps: {{ recipe.steps }}</p>
-            <p>Tools: {{ recipe.tools }}</p>
-            <p><em>by: {{ recipe.created_by }}</em></p>
-         </div>
-      </li>
-      {% endfor %}
-   </ul>
-   {% else%}
-   <h3 class="red-text center-align">No Results</h3>
-   {% endif %}
+           <div class="collapsible-body">
+              <h6> {{ recipe.category_name }}</h6>
 
+              <p>Serving: {{ recipe.serving }}</p>
+              <p>Ingredients: {{ recipe.ingredients }}</p>
+              <p>Cooktime: {{ recipe.cooktime }}</p>
+              <p>Steps: {{ recipe.steps }}</p>
+              <p>Tools: {{ recipe.tools }}</p>
+              <p><em>by: {{ recipe.created_by }}</em></p>
+           </div>
+        </li>
+        {% endfor %}
+     </ul>
 
+     {% else%}
+     <h3 class="red-text center-align">No Results</h3>
+     {% endif %}
 </div>
+
+<footer>
+   <div class="row">
+      <h3>Become chef for our community</h3>
+      <p>Create new recipes, edit your owns recipes and share with all community of Love at first bite . 
+         Bring your fantasy your creativity the incrementing website and on the meantime increase your skills cooking.</p>
+         <a href="{{ url_for('register')}}" class="btn-large #ffcdd2 red lighten-4">Join us</a>
+   </div>
+</footer>
 
 {% endblock %}

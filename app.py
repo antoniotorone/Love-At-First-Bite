@@ -90,9 +90,10 @@ def profile(username):
     categories = mongo.db.category.find().sort("category_name", 1)
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    user_recipes = mongo.db.recipes.find({"created_by":username})
 
     if session["user"]:
-        return render_template("profile.html", username=username, categories=categories)
+        return render_template("profile.html", username=username, recipes=user_recipes, )
 
     return redirect(url_for("login"))
 
@@ -109,6 +110,7 @@ def logout():
 def create_recipe():
     if request.method == "POST":
         recipes = {
+            "img_recipe": request.form.get("img_recipe"),
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "serving": request.form.get("serving"),
@@ -120,7 +122,7 @@ def create_recipe():
         }
         mongo.db.recipes.insert_one(recipes)
         flash("Recipe created successfully")
-        return redirect(url_for("get_recipes",))
+        return redirect(url_for('profile', username=session['user'] ))
 
 
     categories = mongo.db.category.find().sort("category_name", 1)

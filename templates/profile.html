@@ -10,21 +10,49 @@
   </div>
 </div>
 
-<div class="row">
-  {% for category in categories %}
-      <div class="col s12 m6">
-          <div class="card light-blue darken-4 text-shadow center-align">
-              <div class="card-content white-text">
-                  <span class="card-title">{{ category.category_name }}</span>
-              </div>
-              <div class="card-action">
-                <a class=" collapsible popout waves-effect waves-light btn">View</a>
-                
-              </div>
-          </div>
+
+   <ul class="collapsible">
+      {% for recipe in recipes %}
+      <div class="col s4">
+         <img class="img-responsive" src="{{recipe.img_recipe}}">
       </div>
-  {% endfor %}
-  
+      <li>
+         <div class="collapsible-header">
+            <div class="col s4 m4 ">
+               <i class="fas fa-caret-down"></i>
+               {% if session.user|lower == recipe.created_by|lower %}
+               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
+                  class="btn-small btn #ef9a9a red lighten-3">Delete</a>
+               <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}"
+                  class="btn-small #ffcc80 orange lighten-3">Edit</a>
+               {% endif %}
+            </div>
+
+            <div class="col s4 m8">
+               <h5 class="font-name">{{ recipe.recipe_name }}</h5>
+
+            </div>
+
+              
+
+           </div>
+
+
+           <div class="collapsible-body">
+              <h6> {{ recipe.category_name }}</h6>
+
+              <p>Serving: {{ recipe.serving }}</p>
+              <p>Ingredients: {{ recipe.ingredients }}</p>
+              <p>Cooktime: {{ recipe.cooktime }}</p>
+              <p>Steps: {{ recipe.steps }}</p>
+              <p>Tools: {{ recipe.tools }}</p>
+              <p><em>by: {{ recipe.created_by }}</em></p>
+           </div>
+        </li>
+        {% endfor %}
+     </ul>
+
+     
 </div>
 
 {% endblock %}
