@@ -87,7 +87,6 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # retrieve data form session user's username from mongo db
-    categories = mongo.db.category.find().sort("category_name", 1)
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     user_recipes = mongo.db.recipes.find({"created_by":username})

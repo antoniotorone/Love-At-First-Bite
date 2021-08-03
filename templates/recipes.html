@@ -82,6 +82,7 @@
      {% endif %}
 </div>
 
+{% if not session ['user'] %}
 <footer>
    <div class="row">
       <h3>Become chef for our community</h3>
@@ -90,5 +91,6 @@
          <a href="{{ url_for('register')}}" class="btn-large #ffcdd2 red lighten-4">Join us</a>
    </div>
 </footer>
+{% endif %}
 
 {% endblock %}
