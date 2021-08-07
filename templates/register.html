@@ -4,30 +4,34 @@
 <h3 class="center-align">Join us</h3>
 <div class="row">
   <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-    
+
     <div class="card-panel">
-      
+
       <!-- username -->
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-user-tie prefix"></i>
-          <input id="username" name="username" type="text"  minlength="3"
-          maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
+          <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$"
+            class="validate" ria-label="username register field" required>
           <label for="username">Username</label>
         </div>
       </div>
+
+
       <!-- passowrd -->
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-door-closed prefix"></i>
-          <input id="password" name="password" type="password" minlength="3"
-          maxlength="15" pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
+          <input id="password" name="password" type="password" minlength="3" maxlength="15"
+            pattern="^[a-zA-Z0-9]{3,15}$" class="validate" aria-label="password register field" required>
           <label for="password">Password</label>
         </div>
       </div>
+
+
       <!-- register -->
       <div class="row">
-        <button type="submit" class="col s12 btn-large #ffcdd2 red lighten-4  ">
+        <button type="submit" class="col s12 btn-large #ffcdd2 red lighten-4" aria-label="register button">
           Register <i class="fas fa-sign-in-alt"></i>
         </button>
       </div>
@@ -38,7 +42,7 @@
 <div class="row">
   <div class="col s12">
     <p class="center-align">Already registered?
-      <a href="{{ url_for('login')}}" class="login-link">Log in </a></p>
+      <a href="{{ url_for('login')}}" class="login-link" aria-label="link to come back to log in page">Log in </a></p>
   </div>
 </div>
 

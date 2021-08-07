@@ -5,31 +5,34 @@
 
 <div class="row">
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+
+
         <!--foo Category name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder prefix"></i>
-                <select id="category_name" name="category_name" class="validate" required>
+                <select id="category_name" name="category_name" class="validate" aria-label="choose category food"
+                    required>
                     <option value="" disabled>Choose Category</option>
-                 {% for category in categories %}
-                       {% if category.category_name == recipe.category_name %}
-                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                        {% else %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endif %}
-                 {% endfor %}
+                    {% for category in categories %}
+                    {% if category.category_name == recipe.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
+                    {% endfor %}
                 </select>
                 <label for="category_name">Recipe Category</label>
             </div>
         </div>
         
+       
         <!--Recipe name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pen-nib prefix"></i>
-                <input id="recipe_name" name="recipe_name" minlength="3" maxlenght="50" 
-                     value="{{recipe.recipe_name}}"type="text" class="validate"
-                    required>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlenght="50" value="{{recipe.recipe_name}}"
+                    aria-label="recipe name field" type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
@@ -39,16 +42,21 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-chair prefix"></i>
-                <input id="serving" name="serving" value="{{recipe.serving}}" type="text" class="validate" required>
+                <input id="serving" name="serving" value="{{recipe.serving}}" type="text" class="validate"
+                    aria-label="serving number field" required>
                 <label for="serving">Serving</label>
             </div>
         </div>
+
+
         <!--Recipe ingredients-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-mortar-pestle prefix"></i>
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea">
-                    {{- recipe.ingredients -}}</textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea"
+                    aria-label="recipe ingredients area">
+                    {{- recipe.ingredients -}}
+                </textarea>
                 <label for="ingredients">Ingredients</label>
             </div>
         </div>
@@ -58,43 +66,37 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-stopwatch prefix"></i>
-                <input id="cooktime" name="cooktime" value="{{recipe.cooktime}}" type="text" class="validate" required>
+                <input id="cooktime" name="cooktime" value="{{recipe.cooktime}}" type="text" class="validate"
+                   aria-label="cooktime field required">
                 <label for="cooktime">Cooktime</label>
             </div>
         </div>
+
+
         <!--Make the recipe by steps-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-shoe-prints prefix"></i>
-                <textarea id="steps" name="steps" class="materialize-textarea"> 
-                    {{- recipe.steps -}}</textarea>
+                <textarea id="steps" name="steps" class="materialize-textarea" aria-label="steps recipe area">
+                    {{- recipe.steps -}}
+                </textarea>
                 <label for="steps">Steps</label>
             </div>
         </div>
-
-
-        <!--Tools needed-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-utensil-spoon prefix"></i>
-                <input id="tools" name="tools" value="{{recipe.tools}}" type="text" class="validate" required>
-                <label for="tools">Tools</label>
-            </div>
-        </div>
-
-
-        <!--Submit button-->
+        
+       
+        <!--Cancel and Edit button-->
         <div class="row">
             <div class="col s12 center-align">
-                <!-- Cancel button -->
-                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
+                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow"
+                    aria-label="cancel button edit recipe">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large #ffcc80 orange lighten-3" aria-label="edit button edit recipe">
                     Edit Task <i class="fas fa-edit right"></i>
                 </button>
             </div>
         </div>
-    </form>
-</div>
+        </form>
+        </div>
 {% endblock %}

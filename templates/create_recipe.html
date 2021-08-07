@@ -5,11 +5,14 @@
 
 <div class="row">
     <form class="col s12" method="POST" action="{{ url_for('create_recipe') }}">
+
+
         <!--foo Category name-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder prefix"></i>
-                <select id="category_name" name="category_name" class="validate" required>
+                <select id="category_name" name="category_name" class="validate" aria-label="choose category food"
+                    required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -23,11 +26,11 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-image prefix"></i>
-                <input id="img_recipe" name="img_recipe" type="text" class="validate"
+                <input id="img_recipe" name="img_recipe" type="text" class="validate" aria-label="image recipe field"
                     required>
                 <label for="img_recipe">Image</label>
             </div>
-           
+
         </div>
 
        
@@ -36,39 +39,50 @@
             <div class="input-field col s12">
                 <i class="fas fa-pen-nib prefix"></i>
                 <input id="recipe_name" name="recipe_name" minlength="3" maxlenght="50" type="text" class="validate"
-                    required>
+                    aria-label="recipe name field" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
+
+
         <!--Serving number-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-chair prefix"></i>
-                <input id="serving" name="serving" type="text" class="validate" required>
+                <input id="serving" name="serving" type="text" class="validate" aria-label="serving number field"
+                    required>
                 <label for="serving">Serving</label>
             </div>
         </div>
+
+
         <!--Recipe ingredients-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-mortar-pestle prefix"></i>
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea"></textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea"
+                    aria-label="recipe ingredients area"></textarea>
                 <label for="ingredients">Ingredients</label>
             </div>
         </div>
+
+
         <!--Cooktime-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-stopwatch prefix"></i>
-                <input id="cooktime" name="cooktime" type="text" class="validate" required>
+                <input id="cooktime" name="cooktime" type="text" class="validate" aria-label="cooktime field" required>
                 <label for="cooktime">Cooktime</label>
             </div>
         </div>
+
+
         <!--Make the recipe by steps-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-shoe-prints prefix"></i>
-                <textarea id="steps" name="steps" class="materialize-textarea"></textarea>
+                <textarea id="steps" name="steps" class="materialize-textarea"
+                    aria-label="steps recipe area"></textarea>
                 <label for="steps">Steps</label>
             </div>
         </div>
@@ -76,7 +90,8 @@
         
         <!--Button submit form-->
         <div class="row">
-            <button class="btn-large  #ffcdd2 red lighten-4 col s6 offset-s3 center-align" type="submit">Create Recipe
+            <button class="btn-large  #ffcdd2 red lighten-4 col s6 offset-s3 center-align"
+                aria-label="create recipe button" type="submit">Create Recipe
                 <i class="material-icons right"></i>
             </button>
         </div>

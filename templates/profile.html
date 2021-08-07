@@ -3,11 +3,11 @@
 
 
 <div class="row">
-  <div class="col s12 m8 offset-m2">
-    <div class="card-panel">
-        <h3 class="center-align"> Hello {{ username }}</h3>
-     </div>
-  </div>
+   <div class="col s12 m8 offset-m2">
+      <div class="card-panel">
+         <h3 class="center-align"> Hello {{ username }}</h3>
+      </div>
+   </div>
 </div>
 
 
@@ -18,38 +18,38 @@
 
       </div>
       <div class="col s4">
-         <img class="img-responsive" src="{{recipe.img_recipe}}">
+         <img class="img-responsive" src="{{recipe.img_recipe}}" alt="image recipe">
       </div>
       <li>
          <div class="collapsible-header">
             <div class="col s4 m4 ">
                <i class="fas fa-caret-down"></i>
                {% if session.user|lower == recipe.created_by|lower %}
-               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
-                  class="btn-small btn #ef9a9a red lighten-3">Delete</a>
-               <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}"
-                  class="btn-small #ffcc80 orange lighten-3">Edit</a>
+               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-small btn #ef9a9a red lighten-3"
+                  aria-label="delete recipe button">Delete</a>
+               <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small #ffcc80 orange lighten-3"
+                  aria-label="edit recipe button">Edit</a>
                {% endif %}
             </div>
 
-           
-
-              
-
-           </div>
 
 
-           <div class="collapsible-body">
-              <h6> {{ recipe.category_name }}</h6>
-              <p>Serving: {{ recipe.serving }}</p>
-              <p>Ingredients: {{ recipe.ingredients }}</p>
-              <p>Cooktime: {{ recipe.cooktime }}</p>
-              <p>Steps: {{ recipe.steps }}</p>
-              <p><em>by: {{ recipe.created_by }}</em></p>
-           </div>
-        </li>
-        {% endfor %}
-     </ul>
+
+
+         </div>
+
+
+         <div class="collapsible-body">
+            <h6> {{ recipe.category_name }}</h6>
+            <p>Serving: {{ recipe.serving }}</p>
+            <p>Ingredients: {{ recipe.ingredients }}</p>
+            <p>Cooktime: {{ recipe.cooktime }}</p>
+            <p>Steps: {{ recipe.steps }}</p>
+            <p><em>by: {{ recipe.created_by }}</em></p>
+         </div>
+      </li>
+      {% endfor %}
+   </ul>
 
      
 </div>

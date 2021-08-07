@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--Search bar-->
 <div class="card-panel search-bar">
    <form action="{{ url_for('search')}}" method="post" class="col s12">
       <div class="row valign-wrapper center-align">
@@ -9,29 +10,30 @@
             <input type="text" name="query" id="query" class="validate" required>
             <label for="query">Search recipe</label>
          </div>
-         <button type="submit" class=" #e0e0e0 grey lighten-2">
+         <button type="submit" class=" #e0e0e0 grey lighten-2" aria-label="submit search bar button">
             <i class="fas fa-search left"></i>Search
          </button>
       </div>
       <div class="col s12 ">
-         <a href="{{url_for('get_recipes')}}" class="btn #ef9a9a red lighten-3">Reset</a>
-         
+         <a href="{{url_for('get_recipes')}}" class="btn #ef9a9a red lighten-3"
+            aria-label="reset search bar button">Reset</a>
+
       </div>
 
    </form>
 </div>
 
 <div class="carousel">
-   <a class="carousel-item responsive-img" href="#one!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-atzWFItRHy8-unsplash_1_fjrqjq.jpg"></a>
-   <a class="carousel-item" href="#two!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672100/3rd%20milestone/shourav-sheikh-a66sGfOnnqQ-unsplash_kz0he5.jpg"></a>
-   <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672100/3rd%20milestone/jannis-brandt-mmsQUgMLqUo-unsplash_u0ze8a.jpg"></a>
-   <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672099/3rd%20milestone/eaters-collective-ddZYOtZUnBk-unsplash_kgwrc1.jpg"></a>
-   <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-BepcnEnnoPs-unsplash_piks5d.jpg"></a>
-   <a class="carousel-item responsive-img" href="#one!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326177/3rd%20milestone/brooke-lark-M4E7X3z80PQ-unsplash_lsbfjb.jpg"></a>
-   <a class="carousel-item" href="#two!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ball-park-brand-DGHy9KgdTj0-unsplash_hevinw.jpg"></a>
-   <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/melanie-kreutz-cSzyY2UaFSI-unsplash_rbni7z.jpg"></a>
-   <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ting-tian-_79ZJS8pV70-unsplash_xzzvv6.jpg"></a>
-   <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/hermes-rivera-OzBLe_Eg1mg-unsplash_ck2jg6.jpg"></a>
+   <a class="carousel-item responsive-img" href="#one!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-atzWFItRHy8-unsplash_1_fjrqjq.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#two!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672100/3rd%20milestone/shourav-sheikh-a66sGfOnnqQ-unsplash_kz0he5.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672100/3rd%20milestone/jannis-brandt-mmsQUgMLqUo-unsplash_u0ze8a.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672099/3rd%20milestone/eaters-collective-ddZYOtZUnBk-unsplash_kgwrc1.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-BepcnEnnoPs-unsplash_piks5d.jpg" alt="carousel-image"></a>
+   <a class="carousel-item responsive-img" href="#one!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326177/3rd%20milestone/brooke-lark-M4E7X3z80PQ-unsplash_lsbfjb.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#two!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ball-park-brand-DGHy9KgdTj0-unsplash_hevinw.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/melanie-kreutz-cSzyY2UaFSI-unsplash_rbni7z.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ting-tian-_79ZJS8pV70-unsplash_xzzvv6.jpg" alt="carousel-image"></a>
+   <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/hermes-rivera-OzBLe_Eg1mg-unsplash_ck2jg6.jpg" alt="carousel-image"></a>
  </div>
      
 <div class="row center-align ">
@@ -49,54 +51,54 @@
       </div>
 
       <div class="col s4">
-         <img class="img-responsive" src="{{recipe.img_recipe}}">
+         <img class="img-responsive" src="{{recipe.img_recipe}}" alt="image recipe">
       </div>
       <li>
          <div class="collapsible-header">
             <div class="col s4 m4 ">
                <i class="fas fa-caret-down"></i>
                {% if session.user|lower == recipe.created_by|lower %}
-               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
-                  class="btn-small btn #ef9a9a red lighten-3">Delete</a>
-               <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}"
-                  class="btn-small #ffcc80 orange lighten-3">Edit</a>
+               <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-small btn #ef9a9a red lighten-3"
+                  aria-label="delete button for delete recipe">Delete</a>
+               <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small #ffcc80 orange lighten-3"
+                  aria-label="edit button for edit recipe">Edit</a>
                {% endif %}
             </div>
 
-           
-              
-
-           </div>
 
 
-           <div class="collapsible-body">
-              <h6> {{ recipe.category_name }}</h6>
 
-              <p>Serving: {{ recipe.serving }}</p>
-              <p>Ingredients: {{ recipe.ingredients }}</p>
-              <p>Cooktime: {{ recipe.cooktime }}</p>
-              <p>Steps: {{ recipe.steps }}</p>
-              <p>Tools: {{ recipe.tools }}</p>
-              <p><em>by: {{ recipe.created_by }}</em></p>
-           </div>
-        </li>
-        {% endfor %}
-     </ul>
+         </div>
 
-     {% else%}
-     <h3 class="red-text center-align">No Results</h3>
-     {% endif %}
-</div>
 
-{% if not session ['user'] %}
-<footer>
-   <div class="row">
-      <h3>Become chef for our community</h3>
-      <p>Create new recipes, edit your owns recipes and share with all community of Love at first bite . 
-         Bring your fantasy your creativity the incrementing website and on the meantime increase your skills cooking.</p>
-         <a href="{{ url_for('register')}}" class="btn-large #ffcdd2 red lighten-4">Join us</a>
+         <div class="collapsible-body">
+            <h6> {{ recipe.category_name }}</h6>
+            <p>Serving: {{ recipe.serving }}</p>
+            <p>Ingredients: {{ recipe.ingredients }}</p>
+            <p>Cooktime: {{ recipe.cooktime }}</p>
+            <p>Steps: {{ recipe.steps }}</p>
+            <p>Tools: {{ recipe.tools }}</p>
+            <p><em>by: {{ recipe.created_by }}</em></p>
+         </div>
+      </li>
+      {% endfor %}
+   </ul>
+
+   {% else%}
+   <h3 class="red-text center-align">No Results</h3>
+   {% endif %}
    </div>
-</footer>
+
+   {% if not session ['user'] %}
+   <footer>
+      <div class="row">
+         <h3>Become chef for our community</h3>
+         <p>Create new recipes, edit your owns recipes and share with all community of Love at first bite .
+            Bring your fantasy your creativity the incrementing website and on the meantime increase your skills
+            cooking.</p>
+         <a href="{{ url_for('register')}}" class="btn-large #ffcdd2 red lighten-4">Join us</a>
+      </div>
+   </footer>
 {% endif %}
 
 {% endblock %}

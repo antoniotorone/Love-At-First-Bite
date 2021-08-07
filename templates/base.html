@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cookbook food recipe website application">
+    <meta name="keywords" content="cooking, create recipes, food recipes, appetizers, first main, main, desserts">
+    <meta name="author" content="Antonio torone">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -19,39 +22,45 @@
         <!-- top navbar -->
         <nav class="nav-style">
             <div class="nav-wrapper">
-              <a href="{{ url_for('get_recipes')}}" class="logo-size">Love At First Bite</a>
-             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
-            {% if session.user%}
-                <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
-                <li><a href="{{ url_for ('create_recipe')}}">Create Recipe</a></li>
-                <li><a href="{{ url_for ('logout')}}">Log out</a></li>
-            {% else %}
-                <li><a href="{{ url_for ('login')}}">Log in</a></li>
-                <li><a href="{{ url_for('register')}}">Register</a></li>
-            {% endif %}
-               
-              </ul>
+                <a href="{{ url_for('get_recipes')}}" class="logo-size" aria-label="logo name">Love At First Bite</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+                    {% if session.user%}
+                    <li><a href="{{ url_for('profile', username=session['user'])}}"
+                            aria-label="go to profile page">Profile</a></li>
+                    <li><a href="{{ url_for ('create_recipe')}}" aria-label="go to create recipe form page">Create
+                            Recipe</a></li>
+                    <li><a href="{{ url_for ('logout')}}" aria-label="log out">Log out</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for ('login')}}" aria-label=" go to log in form page">Log in</a></li>
+                    <li><a href="{{ url_for('register')}}" aria-label="go to register form page">Register</a></li>
+                    {% endif %}
+
+                </ul>
             </div>
-          </nav>
+        </nav>
         
           <!-- mobile -->
           <ul class="sidenav mobile-nav" id="mobile-demo">
-            <h4 class="logo-size">Love At First Bite</h4>
-            <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
-        {% if session.user%}
-            <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
-            <li><a href="{{ url_for ('create_recipe')}}">Create Recipe</a></li>
-            <li><a href="{{ url_for ('logout')}}">Log out</a></li>
-        {% else %}
-            <li><a href="{{ url_for ('login')}}">Log in</a></li>
-            <li><a href="{{ url_for('register')}}">Register</a></li>
-        {% endif %}
+              <h4 class="logo-size">Love At First Bite</h4>
+              <li><a href="{{ url_for('get_recipes')}}" aria-label="go to home page">Home</a></li>
+              {% if session.user%}
+              <li><a href="{{ url_for('profile', username=session['user'])}}"
+                      aria-label="go to profile page">Profile</a></li>
+              <li><a href="{{ url_for ('create_recipe')}}" aria-label="go to create recipe form page">Create Recipe</a>
+              </li>
+              <li><a href="{{ url_for ('logout')}}" aria-label="log out">Log out</a></li>
+              {% else %}
+              <li><a href="{{ url_for ('login')}}" aria-label="go to log in form page">Log in</a></li>
+              <li><a href="{{ url_for('register')}}" aria-label="go to register form page">Register</a></li>
+              {% endif %}
           </ul>
 
     </header>
 
+
+    <!--flash messages-->
     <section>
       {% with messages = get_flashed_messages() %}
             {% if messages %}
