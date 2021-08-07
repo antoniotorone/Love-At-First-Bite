@@ -138,7 +138,6 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.getlist("ingredients"),
             "cooktime": request.form.get("cooktime"),
             "steps": request.form.getlist("steps"),
-            "tools": request.form.get("tools"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)

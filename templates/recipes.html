@@ -27,6 +27,11 @@
    <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672100/3rd%20milestone/jannis-brandt-mmsQUgMLqUo-unsplash_u0ze8a.jpg"></a>
    <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672099/3rd%20milestone/eaters-collective-ddZYOtZUnBk-unsplash_kgwrc1.jpg"></a>
    <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1627672098/3rd%20milestone/brooke-lark-BepcnEnnoPs-unsplash_piks5d.jpg"></a>
+   <a class="carousel-item responsive-img" href="#one!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326177/3rd%20milestone/brooke-lark-M4E7X3z80PQ-unsplash_lsbfjb.jpg"></a>
+   <a class="carousel-item" href="#two!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ball-park-brand-DGHy9KgdTj0-unsplash_hevinw.jpg"></a>
+   <a class="carousel-item" href="#three!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/melanie-kreutz-cSzyY2UaFSI-unsplash_rbni7z.jpg"></a>
+   <a class="carousel-item" href="#four!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/ting-tian-_79ZJS8pV70-unsplash_xzzvv6.jpg"></a>
+   <a class="carousel-item" href="#five!"><img src="https://res.cloudinary.com/anto8913/image/upload/v1628326176/3rd%20milestone/hermes-rivera-OzBLe_Eg1mg-unsplash_ck2jg6.jpg"></a>
  </div>
      
 <div class="row center-align ">
@@ -38,6 +43,11 @@
    {% if recipes|length> 0 %}
    <ul class="collapsible">
       {% for recipe in recipes %}
+      <div class="col s4 m8">
+         <h5 class="font-name">{{ recipe.recipe_name }}</h5>
+
+      </div>
+
       <div class="col s4">
          <img class="img-responsive" src="{{recipe.img_recipe}}">
       </div>
@@ -53,11 +63,7 @@
                {% endif %}
             </div>
 
-            <div class="col s4 m8">
-               <h5 class="font-name">{{ recipe.recipe_name }}</h5>
-
-            </div>
-
+           
               
 
            </div>

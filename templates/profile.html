@@ -13,6 +13,10 @@
 
    <ul class="collapsible">
       {% for recipe in recipes %}
+      <div class="col s4 m8">
+         <h5 class="font-name">{{ recipe.recipe_name }}</h5>
+
+      </div>
       <div class="col s4">
          <img class="img-responsive" src="{{recipe.img_recipe}}">
       </div>
@@ -28,10 +32,7 @@
                {% endif %}
             </div>
 
-            <div class="col s4 m8">
-               <h5 class="font-name">{{ recipe.recipe_name }}</h5>
-
-            </div>
+           
 
               
 
@@ -40,12 +41,10 @@
 
            <div class="collapsible-body">
               <h6> {{ recipe.category_name }}</h6>
-
               <p>Serving: {{ recipe.serving }}</p>
               <p>Ingredients: {{ recipe.ingredients }}</p>
               <p>Cooktime: {{ recipe.cooktime }}</p>
               <p>Steps: {{ recipe.steps }}</p>
-              <p>Tools: {{ recipe.tools }}</p>
               <p><em>by: {{ recipe.created_by }}</em></p>
            </div>
         </li>
