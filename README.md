@@ -121,3 +121,26 @@ All devices wireframes pdf file [view]()
 
 
 ### Validator Testing
+
+The W3C Markup Validator  W3C CSS validator and JAVASCRIPT services were used to validate every page and ensure there were no syntax errors in the project. 
+The Lighthouse test was used to check the performance, best practices and accessibility.
+
+* [W3C Markup Validator results](https://github.com/antoniotorone/cookbook/tree/main/Documentation/Validation-test-PDF)
+* [W3C CSS Validator result](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/Css.style.pdf.pdf)
+* [Java Script validator results](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/script.js.pdf.pdf)
+* [Lighthouse test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/lighthouse.pdf.pdf)
+
+
+### Manual testing
+
+#### Search bar
+
+##### Expected 
+
+1. I was expected to get the research by food category_name, food recipe_name and food ingredients.
+
+##### Results
+
+1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-_testing-search_bar_bmyzxe.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual_testing-_searc_bar_ghe942.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-testing-search-bar_wuqcxv.jpg)
+
+#### 
