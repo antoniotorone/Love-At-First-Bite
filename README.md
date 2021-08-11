@@ -151,7 +151,7 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ##### Results
 
-1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe_qzdl2n.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe2_juizms.jpg)
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe_qzdl2n.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628685749/3rd%20milestone/manual%20testing/delete_recipe_message_g7fykv.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe2_juizms.jpg)
 
 #### Edit button
 
@@ -206,7 +206,7 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ### Known Bugs
 
-1. During the testing process I got 1 repetitive error and 1 warning that I already mentioned inside the validation-test [view here](Documentation/Validation-test-PDF/validation-test.md). The error is the following: div and h4 elements are not allowed to be child of ul element and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings. As I mentioned inside the validation-test I decided to leave it because they can break the layout of the website and can not fulfil the developer's idea. I checked with these errors the site and they do not damage the functionality of the application, so I decided to leave everything unchangeable.
+1. During the testing process I got 1 repeating error and 1 warning, which I already mentioned here in the validation test [view here](Documentation/Validation-test-PDF/validation-test.md). The error is the following: div and h4 elements are not allowed to be child of ul element, and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings. As I mentioned in the validation test, I decided not to do this because they can break the layout of the website and can not fulfil the developer's idea. I checked the website with these errors and they do not affect the functionality of the application, so I decided to leave everything unchanged.
 
 
 ## Deployment 
