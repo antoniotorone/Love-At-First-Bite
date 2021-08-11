@@ -143,4 +143,141 @@ The Lighthouse test was used to check the performance, best practices and access
 
 1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-_testing-search_bar_bmyzxe.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual_testing-_searc_bar_ghe942.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-testing-search-bar_wuqcxv.jpg)
 
-#### 
+#### Delete button
+
+##### Expected
+
+1. I was expected to delete the recipe chosen by click the proper button.
+
+##### Results
+
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe_qzdl2n.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/delete_recipe2_juizms.jpg)
+
+#### Edit button
+
+##### Expected
+
+1. I was expected to edit the recipe chosen by click the proper button.
+
+##### Results
+
+1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442650/3rd%20milestone/manual%20testing/edit-recipe2_rsr3e9.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442651/3rd%20milestone/manual%20testing/edi-recipe-message_jgosja.jpg)
+
+#### Create recipe form
+
+##### Expected
+
+1. I was expected to create a recipe filling up all fields and click the proper button.
+
+##### Results
+
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273433/3rd%20milestone/testing%20screenshot%20/returning-create_recipe-1_b0p3vd.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442651/3rd%20milestone/manual%20testing/create-recipe_ypfgbr.jpg)
+
+#### Log in and the required attribute
+
+##### Expected
+
+1. I was expected to log in filling up the form fields and to get the required pop up message in case of any mistake.
+
+##### Results
+
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_to_profile_hqa6r1.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_username_wz4keu.jpg).
+
+#### Log out
+
+##### Expected
+
+1. I was expected to log out clicking the log out link inside the nav bar
+
+##### Results
+
+1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/logout_unwzdg.jpg)
+
+#### Register and the required attribute
+
+##### Expexted
+
+1.  I was expected to register filling up the form fields and to get the required pop up message in case of any mistake.
+
+##### Results
+
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442651/3rd%20milestone/manual%20testing/register_username_tgzzij.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682479/3rd%20milestone/manual%20testing/register_to_mongo_rlzfiv.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682614/3rd%20milestone/manual%20testing/mongo_db_user_p4sefr.jpg).
+
+
+### Known Bugs
+
+1. During the testing process I got 1 repetitive error and 1 warning that I already mentioned inside the validation-test [view here](Documentation/Validation-test-PDF/validation-test.md). The error is the following: div and h4 elements are not allowed to be child of ul element and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings. As I mentioned inside the validation-test I decided to leave it because they can break the layout of the website and can not fulfil the developer's idea. I checked with these errors the site and they do not damage the functionality of the application, so I decided to leave everything unchangeable.
+
+
+## Deployment 
+
+### Heroku Deployment
+
+To deploy Family Hub to heroku, take the following steps:
+
+
+1. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
+
+2. Create a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+
+3. `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
+
+3. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
+
+4. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+
+5. Confirm the linking of the heroku app to the correct GitHub repository.
+
+6. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+
+7. Set the following config vars:
+
+| Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 0.0.0.0
+MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority`
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+
+- To get you MONGO_URI read the MongoDB Atlas documentation [here](https://docs.atlas.mongodb.com/)
+
+8. In the heroku dashboard, click "Deploy".
+
+9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
+
+10. The site is now successfully deployed.
+
+
+## Credits
+
+### Code
+
+[FontAwesome](https://fontawesome.com/)
+
+The icons were taken form here 
+
+[Materialize 1.0.0](https://materializecss.com/)
+
+The navigation bar, carousel, collapsible menu, log in, register, create and edit recipe form, buttons, grid system and colours were taken here.
+
+### Content
+
+The recipes contents were taken form the website [giallo zafferano](https://www.giallozafferano.com/).
+
+### Media
+
+All photos were taken form the website [unsplash](https://unsplash.com/).
+
+## Acknowledgements
+
+My mentor gave me a lot of advice during our meeting call
+
+Tutor support from CodeInstitute was essential.
+
+
+
+
+
+
+
