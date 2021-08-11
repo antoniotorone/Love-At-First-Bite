@@ -43,7 +43,7 @@ The images were inserted by the developer with a URL within the src attribute th
 
 ### Wireframes
 
-All devices wireframes pdf file [view]()
+All devices wireframes pdf file [view](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Wireframes/wireframes-pdf.pdf)
 
 
 ## Features
