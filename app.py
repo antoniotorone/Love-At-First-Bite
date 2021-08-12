@@ -50,7 +50,7 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        #cookie
+        # cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Completed Successfully")
         return redirect(url_for("profile", username=session["user"]))
@@ -67,10 +67,11 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                existing_user["password"], request.form.get("password")
+            ):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -99,7 +100,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    #remove user from session cookies
+    # remove user from session cookies
     flash("You have been logged out successfully")
     session.pop("user")
     return redirect(url_for("login"))
@@ -116,12 +117,12 @@ def create_recipe():
             "ingredients": request.form.getlist("ingredients"),
             "cooktime": request.form.get("cooktime"),
             "steps": request.form.getlist("steps"),
-            "tools": request.form.get("tools"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipes)
         flash("Recipe created successfully")
-        return redirect(url_for('profile', username=session['user'] ))
+        return redirect(url_for('profile', username=session['user'] ) 
+        )
 
 
     categories = mongo.db.category.find().sort("category_name", 1)
