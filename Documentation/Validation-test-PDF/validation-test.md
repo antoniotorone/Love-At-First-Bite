@@ -18,7 +18,7 @@
 ## Profile.html
 
 * The first time I ran the html5 validation test for profile.html, the document came out the document came out with 1 error (the same one multiple times) and 1 warning. The error is the following: div and h4 elements are not allowed to be child of ul element and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings. The error and warning were not fixed because they break the layout of the website and can not fulfil the developer's idea, so I decided to leave everything unchangeable..
-[View the test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/profile.html.pdf.pdf)
+[View the test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/profile.html.pdf)
 
 ## Create_recipe.html
 
@@ -33,11 +33,15 @@
 ## Css(style.css)
 
 * The Css validator test came out after the first time without any errors.
-[View the test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/Css.style.pdf.pdf)
+[View the test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/CSS.style.pdf.pdf)
 
 ## script.js
 
 * The test came out with an undefined variable regarding $. I'm aware to use jquery, the jquery method does not damage the web functionality and and that is why I left untouched.
 [View the test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/script.js.pdf.pdf)
+
+## app.py
+
+* The first time I ran the app.py pep8 validation the document came out wthout any errors. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628842953/3rd%20milestone/testing%20screenshot%20/python-validation-screeshot_eiekzm.jpg) [View here](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/app.py.txt)
 
 
