@@ -30,8 +30,6 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
-    
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -90,11 +88,11 @@ def profile(username):
     # retrieve data form session user's username from mongo db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    user_recipes = mongo.db.recipes.find({"created_by":username})
+    user_recipes = mongo.db.recipes.find({"created_by": username})
 
     if session["user"]:
-        return render_template("profile.html", username=username, recipes=user_recipes, )
-
+        return render_template(
+            "profile.html", username=username, recipes=user_recipes,)
     return redirect(url_for("login"))
 
 
@@ -114,39 +112,37 @@ def create_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "serving": request.form.get("serving"),
-            "ingredients": request.form.getlist("ingredients"),
+            "ingredients": request.form.get("ingredients"),
             "cooktime": request.form.get("cooktime"),
-            "steps": request.form.getlist("steps"),
+            "steps": request.form.get("steps"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipes)
         flash("Recipe created successfully")
-        return redirect(url_for('profile', username=session['user'] ) 
-        )
-
-
+        return redirect(url_for('profile', username=session['user']))
     categories = mongo.db.category.find().sort("category_name", 1)
     return render_template("create_recipe.html", categories=categories)
 
 
-@app.route("/edit_recipe/<recipe_id>", methods = ["GET", "POST"])
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
         edit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "serving": request.form.get("serving"),
-            "ingredients": request.form.getlist("ingredients"),
+            "ingredients": request.form.get("ingredients"),
             "cooktime": request.form.get("cooktime"),
-            "steps": request.form.getlist("steps"),
+            "steps": request.form.get("steps"),
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
         flash("Recipe updated successfully")
-     
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.category.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -154,10 +150,14 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe delete successfully")
     return redirect(url_for("get_recipes"))
-    
-    
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
-     app.run(host=os.environ.get("IP"),
+    app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
-    
+            debug=False)
