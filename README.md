@@ -2,6 +2,25 @@
 
 [View here the live project]()
 
+## Login Details
+
+### User credentials
+
+#### User 1
+
+* username: tony
+* password: oreo
+
+#### User 2
+
+* username: linda
+* password: oreo
+
+#### User 3
+
+* username: admin
+* password: oreo
+
 ## Love At First Bite
 
 Interactive website application where the main purpose is to share data and achieve the function CRUD.
@@ -126,7 +145,7 @@ The W3C Markup Validator  W3C CSS validator and JAVASCRIPT services were used to
 The Lighthouse test was used to check the performance, best practices and accessibility.
 
 * [W3C Markup Validator results](https://github.com/antoniotorone/cookbook/tree/main/Documentation/Validation-test-PDF)
-* [W3C CSS Validator result](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/Css.style.pdf.pdf)
+* [W3C CSS Validator result](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/CSS.style.pdf.pdf)
 * [Java Script validator results](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/script.js.pdf.pdf)
 * [Lighthouse test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/lighthouse.pdf.pdf)
 
@@ -206,7 +225,7 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ### Known Bugs
 
-1. During the testing process I got 1 repeating error and 1 warning regarding html files, about python file I got 1 error which are already mentioned here in the validation test [view here](Documentation/Validation-test-PDF/validation-test.md). The error for html files is the following: div and h4 elements are not allowed to be child of ul element, and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings and for python file the error is the following: 'env' imported but unused. As I mentioned in the validation test, I decided not to take any actions because they can break the layout of the website and can not fulfil the developer's idea, regarding the python one env needs to be imported in order to access the environment variables locally. They are then added to the os.environ which we use directly instead of env (which is not accessible to Heroku), so Flake8 doesn't know it's being used so it's there but it cannot be fixed. I checked the website with these errors and they do not affect the functionality of the application, so I decided to leave everything unchanged.
+1. During the testing process I got 1 repeating error and 1 warning regarding html files, about python file I got 1 error which are already mentioned here in the validation test [view here](https://github.com/antoniotorone/cookbook/blob/main/Documentation/validation-test.md). The error for html files is the following: div and h4 elements are not allowed to be child of ul element, and the warning is a suggestion to consider to use h2 or h6 elements for identifying headings and for python file the error is the following: 'env' imported but unused. As I mentioned in the validation test, I decided not to take any actions because they can break the layout of the website and can not fulfil the developer's idea, regarding the python one env needs to be imported in order to access the environment variables locally. They are then added to the os.environ which we use directly instead of env (which is not accessible to Heroku), so Flake8 doesn't know it's being used so it's there but it cannot be fixed. I checked the website with these errors and they do not affect the functionality of the application, so I decided to leave everything unchanged.
 
 
 ## Deployment 
