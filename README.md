@@ -24,7 +24,7 @@
 ## Love At First Bite
 
 Interactive website application where the main purpose is to share data and achieve the function CRUD.
-Bright and friendly website with the ability to register, become a user and create, edit, delete and share personal recipes with the Wesite community. The ability to connect any recipe and increase interest and passion for cooking.
+Bright and friendly website with the ability to register, become a user and create, edit, delete and share personal recipes with the Website community. The ability to connect any recipe and increase interest and passion for cooking.
 
 <h2 align="center"><img src="https://res.cloudinary.com/anto8913/image/upload/v1629024722/3rd%20milestone/responsive_uqsqid.jpg"></h2>
 
@@ -143,11 +143,12 @@ All devices wireframes pdf file [view](https://github.com/antoniotorone/cookbook
 
 ### Validator Testing
 
-The W3C Markup Validator  W3C CSS validator and JAVASCRIPT services were used to validate every page and ensure there were no syntax errors in the project. 
+The W3C Markup Validator  W3C CSS validator Pep8 python validation and JAVASCRIPT services were used to validate every page and ensure there were no syntax errors in the project. 
 The Lighthouse test was used to check the performance, best practices and accessibility.
 
 * [W3C Markup Validator results](https://github.com/antoniotorone/cookbook/tree/main/Documentation/Validation-test-PDF)
 * [W3C CSS Validator result](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/CSS.style.pdf.pdf)
+* [Pep8 Validation](https://github.com/antoniotorone/Love-At-First-Bite/blob/main/Documentation/Validation-test-PDF/app.py.txt) [view here](https://res.cloudinary.com/anto8913/image/upload/v1628842953/3rd%20milestone/testing%20screenshot%20/python-validation-screeshot_eiekzm.jpg)
 * [Java Script validator results](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/script.js.pdf.pdf)
 * [Lighthouse test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/lighthouse.pdf.pdf)
 
@@ -158,11 +159,11 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ##### Expected 
 
-1. I was expected to get the research by food category_name, food recipe_name and food ingredients.
+1. I was expected to get the research by food category_name, food recipe_name and food ingredients, also get the "no results" flash message.
 
 ##### Results
 
-1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-_testing-search_bar_bmyzxe.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual_testing-_searc_bar_ghe942.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-testing-search-bar_wuqcxv.jpg)
+1. As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-_testing-search_bar_bmyzxe.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual_testing-_searc_bar_ghe942.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628273432/3rd%20milestone/testing%20screenshot%20/manual-testing-search-bar_wuqcxv.jpg) [view here](https://res.cloudinary.com/anto8913/image/upload/v1629097706/3rd%20milestone/testing%20screenshot%20/no_results_sxcd85.jpg)
 
 #### Delete button
 
@@ -198,11 +199,11 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ##### Expected
 
-1. I was expected to log in filling up the form fields and to get the required pop up message in case of any mistake.
+1. I was expected to log in filling up the form fields and to get the required pop up message in case of any mistake, also get the "Incorrect Username and/or Password" flash message
 
 ##### Results
 
-1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_to_profile_hqa6r1.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_username_wz4keu.jpg).
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_to_profile_hqa6r1.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442649/3rd%20milestone/manual%20testing/login_username_wz4keu.jpg) [view here](https://res.cloudinary.com/anto8913/image/upload/v1629097706/3rd%20milestone/testing%20screenshot%20/incorrect_username_and_password_mh8qqg.jpg)
 
 #### Log out
 
@@ -218,11 +219,11 @@ The Lighthouse test was used to check the performance, best practices and access
 
 ##### Expexted
 
-1.  I was expected to register filling up the form fields and to get the required pop up message in case of any mistake.
+1.  I was expected to register filling up the form fields and to get the required pop up message in case of any mistake, also get the "username already used" flash message in case the username already exist.
 
 ##### Results
 
-1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442651/3rd%20milestone/manual%20testing/register_username_tgzzij.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682479/3rd%20milestone/manual%20testing/register_to_mongo_rlzfiv.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682614/3rd%20milestone/manual%20testing/mongo_db_user_p4sefr.jpg).
+1.  As a result, I achieved all functionalities that I was expected. [View here](https://res.cloudinary.com/anto8913/image/upload/v1628442651/3rd%20milestone/manual%20testing/register_username_tgzzij.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682479/3rd%20milestone/manual%20testing/register_to_mongo_rlzfiv.jpg) [View here](https://res.cloudinary.com/anto8913/image/upload/v1628682614/3rd%20milestone/manual%20testing/mongo_db_user_p4sefr.jpg) [view here](https://res.cloudinary.com/anto8913/image/upload/v1629097706/3rd%20milestone/testing%20screenshot%20/username_already_used_jcosuq.jpg)
 
 
 ### Known Bugs
