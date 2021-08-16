@@ -148,7 +148,7 @@ The Lighthouse test was used to check the performance, best practices and access
 
 * [W3C Markup Validator results](https://github.com/antoniotorone/cookbook/tree/main/Documentation/Validation-test-PDF)
 * [W3C CSS Validator result](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/CSS.style.pdf.pdf)
-* [Pep8 Validation](https://github.com/antoniotorone/Love-At-First-Bite/blob/main/Documentation/Validation-test-PDF/app.py.txt) [view here](https://res.cloudinary.com/anto8913/image/upload/v1628842953/3rd%20milestone/testing%20screenshot%20/python-validation-screeshot_eiekzm.jpg)
+* [Pep8 Validation](https://github.com/antoniotorone/Love-At-First-Bite/blob/main/Documentation/Validation-test-PDF/app.py.txt) [screenshot result-view here](https://res.cloudinary.com/anto8913/image/upload/v1628842953/3rd%20milestone/testing%20screenshot%20/python-validation-screeshot_eiekzm.jpg)
 * [Java Script validator results](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/script.js.pdf.pdf)
 * [Lighthouse test](https://github.com/antoniotorone/cookbook/blob/main/Documentation/Validation-test-PDF/lighthouse.pdf.pdf)
 
